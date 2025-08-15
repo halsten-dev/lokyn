@@ -1,4 +1,4 @@
-module github.com/haslten-dev/lokyn
+module github.com/halsten-dev/lokyn
 
 go 1.24.6
 
