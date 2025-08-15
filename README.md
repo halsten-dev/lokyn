@@ -1,5 +1,7 @@
 # lokyn
 Lokyn is a simple lib to allow for easy localized applications developpement.
+Heavily inspired by Fyne lang package bit with more of a standalone philosophy.
+
 ## main.go
 ```go
 package main
