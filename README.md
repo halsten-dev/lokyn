@@ -4,15 +4,20 @@ Lokyn is a simple lib to allow for easy localized applications developpement.
 ```go
 package main
 
-import "embed"
-import "github.com/halsten-dev/lokyn"
+import (
+	"embed"
+	"fmt"
+	"github.com/halsten-dev/lokyn"
+	"log"
+)
 
 //go:embed translations
 var translations embed.FS
 
 func main() {
 	lokyn.Init()
-	err = lokyn.AddTranslationFS(translations, "translations")
+
+	err := lokyn.AddTranslationFS(translations, "translations")
 
 	if err != nil {
 		log.Fatal(err)
@@ -20,10 +25,10 @@ func main() {
 
 	lokyn.SetLanguage("en")
 
-
-  fmt.Println(lokyn.L("translation"))
-  fmt.Println(lokyn.P("apple", 2))
+	fmt.Println(lokyn.L("translate"))
+	fmt.Println(lokyn.P("apple", 2))
 }
+
 ```
 
 ## projects structure
@@ -39,8 +44,8 @@ project root /
 {
   "translation": "translation", 
   "apple": {
-        "one": "apple",
-        "other": "apples"
+	"one": "apple",
+    "other": "apples"
   }
 }
 ```
@@ -50,8 +55,8 @@ project root /
 {
   "translation": "traduction",
   "apple": {
-        "one": "pomme",
-        "other": "pommes"
+	"one": "pomme",
+	"other": "pommes"
   }
 }
 ```
