@@ -44,7 +44,7 @@ func AddTranslationFS(fs embed.FS, dir string) error {
 
 		err = addLanguage(data, name)
 		if err != nil {
-			continue
+			return err
 		}
 	}
 
